@@ -1,0 +1,20 @@
+@media (min-width: 0px) and (max-width: 730px) { 
+    .main img{
+        width:85%;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .full h5{
+        font-size: 20px;
+    }
+    
+    .full p{
+        font-size:15px;
+        width: 80%;
+    }
+    
+    .footer p{
+        font-size: 13px;
+    }
+}
