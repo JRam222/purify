@@ -21,6 +21,9 @@ if(isset($_POST['submit'])){
             if($fileSize < 1000000){
                 $fileDestination = 'uploads/' .$fileName;
                 move_uploaded_file($fileTmpName , $fileDestination);
+                $msg = "Dear Purify Leader, \n\nA student has submitted a document to the website titled " .$fileName . ". Click the following link to download it: bccpurify.com/uploads/" .$fileName;
+                mail("jaguas@biblicalcommunity.com","Puify Document Submission",$msg);
+                mail("jramilo@biblicalcommunity.com","Puify Document Submission",$msg);
                 $message = "Successfully submitted. Thank you!";
             }else{
                 echo "Your file is too big.";
@@ -49,13 +52,21 @@ if(isset($_POST['submit'])){
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <!-- Place favicon.ico in the root directory -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/media_query.css">
+        
+        <style>
+            .main img{visibility: hidden;}
+        </style>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -65,20 +76,23 @@ if(isset($_POST['submit'])){
         <?php include("navbar.php"); ?>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 content">
+                <div class="col-lg-12 content no-padding">
                     <div class="main">
-                        <img class="center" src="img/doc.png">
+                        <img class="center" src="img/doc.png" />
                     </div>
                 </div>
                 <div  class="col-lg-6 full red">
-                    <h5>Documents</h5>
-                    <p class="name"><a href="">Application</a></p>
-                    <p class="name"><a href="">Syllabus</a></p>
+                    <h5 data-sr="">Documents</h5>
+                    <p class="name"><a href="https://drive.google.com/open?id=1sZE26705MnRDLrr10cLIUUGlNMqeSFbX" target="_blank">Application</a></p>
+                    <p class="name"><a href="https://drive.google.com/file/d/1BCNn8KsLGHbt70ycF3k4NAhni-23pKU7/view?usp=sharing" target="_blank">2018 Spring Syllabus</a></p>
+                    <p class="name"><a href="https://drive.google.com/file/d/18YvhpKCBHa4WHXFmvUUknhhGTaK-xbGe/view?usp=sharing" target="_blank">Sermon Paper (Options)</a></p>
+                    <p class="name last"><a href="https://drive.google.com/file/d/1o6kixszdhQU-bEdCT2QiCJW9r1sjWY50/view?usp=sharing" target="_blank">Submission Instructions</a></p>
                 </div>
                 <div  class="col-lg-6 full red">
-                    <h5>Submit Documents</h5>
+                    <h5 data-sr="">Submit Documents</h5>
+                    <p class="name notice"><b class="color-red">**</b>Make sure you have satisified the 2 requirements stated in the "Submission Instructions" document prior to submitting your document.</p>
                     <form action="documents.php" method="POST" enctype="multipart/form-data">
-                        <input class= "submit btn" type="file" name="file"><br/><br/>
+                        <input class= "submit btn" type="file" name="file"><br/>
                         <button class="submit btn" type="submit" name="submit">Upload Assignment</button><br/>
                         <p class="name"><?php  echo $message ?></p>
                     </form>
@@ -106,21 +120,23 @@ if(isset($_POST['submit'])){
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+        <script>
 
-<script>
+        // Changing the defaults
+        window.sr = ScrollReveal({ reset: false });
 
-// Changing the defaults
-window.sr = ScrollReveal({ reset: true });
+        // Customizing a reveal set
 
-// Customizing a reveal set
+        sr.reveal('.full p', {duration:1200});
+        sr.reveal('h5', {origin:'left',distance:'100px', duration:1200});
+        sr.reveal('.main img', {origin:'top', duration:1000});
 
-sr.reveal('.full p', {duration:1200});
-
-</script>
-<script>$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-  });</script>
+        </script>
+        <script>$('#toggle').click(function() {
+           $(this).toggleClass('active');
+           $('#overlay').toggleClass('open');
+          });
+        </script>
         
         
     </body>

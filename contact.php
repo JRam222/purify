@@ -11,13 +11,21 @@
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <!-- Place favicon.ico in the root directory -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/media_query.css">
+        
+        <style>
+            .main img{visibility: hidden;}
+        </style>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -27,25 +35,22 @@
         <?php include("navbar.php"); ?>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 content">
+                <div class="col-lg-12 content no-padding">
                     <div class="main">
-                        <img class="center" src="img/contact.png">
+                        <img class="center" src="img/contact.png" />
                     </div>
                 </div>
                 <div  class="col-lg-4 full red">
-                    <h5>Josh Aguas</h5>
-                    <p>Phone: 806 281 7197</p>
-                    <p>Email: josh@bccpurify.com</p>
+                    <h5 data-sr="">Josh Aguas</h5>
+                    <p>Email: jaguas@biblicalcommunity.com</p>
                 </div>
                 <div  class="col-lg-4 full red">
-                    <h5>Victoria Aguas</h5>
-                    <p>Phone: 512 431 6564</p>
-                    <p>Email: victoria@bccpurify.com</p>
+                    <h5 data-sr="">Victoria Aguas</h5>
+                    <p>Email: N/A</p>
                 </div>
                 <div  class="col-lg-4 full red">
-                    <h5>Jeremy Ramilo</h5>
-                    <p>Phone: 214 912 9988</p>
-                    <p>Email: jeremy@bccpurify.com</p>
+                    <h5 data-sr="">Jeremy Ramilo</h5>
+                    <p>Email: jramilo@biblicalcommunity.com</p>
                 </div>
                 <?php include("footer.php");?>
             </div>
@@ -70,21 +75,23 @@
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
+        <script>
 
-<script>
+        // Changing the defaults
+        window.sr = ScrollReveal({ reset: false });
 
-// Changing the defaults
-window.sr = ScrollReveal({ reset: true });
+        // Customizing a reveal set
 
-// Customizing a reveal set
+        sr.reveal('.full p', {duration:1200});
+        sr.reveal('.main img', {origin:'top', duration:1000});
+        sr.reveal('h5', {origin:'left',distance:'100px', duration:1200});
 
-sr.reveal('.full p', {duration:1200});
-
-</script>
-<script>$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-  });</script>
+        </script>
+        <script>$('#toggle').click(function() {
+           $(this).toggleClass('active');
+           $('#overlay').toggleClass('open');
+          });
+        </script>
         
         
     </body>

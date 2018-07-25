@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Purify - Past Semesters</title>
+        <title>Purify - Current &amp; Past Semesters</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,13 +11,21 @@
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <!-- Place favicon.ico in the root directory -->
-
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/media_query.css">
+        
+        <style>
+            .main img{visibility: hidden;}
+        </style>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -29,19 +37,32 @@
             <div class="row">
                 <div class="col-lg-12 content">
                     <div class="main">
-                        <img class="center" src="img/past.png">
+                        <img data-sr="" class="center" src="img/candp.png">
                     </div>
                 </div>
                 <div  class="col-lg-6 full red">
-                    <h5>Fall Semester - 2017</h5>
+                    <h5 data-sr="">Spring Semester - 2018</h5>
+                    <p class="name">Gwen Libero</p>
+                    <p class="name">John Batitang</p>
+                    <p class="name">John Meego Start</p>
+                    <p class="name">Rommel Torres</p>
+                    <p class="name">Joseph Hernandez</p>
+                    <p class="name last">Mark Batitang</p>
+                    
+                </div>
+                <div  class="col-lg-6 full red">
+                    <img class="fullheight" src="img/team2.jpg"/>
+                </div>
+                <div  class="col-lg-6 full red">
+                    <img class="fullheight" src="img/team.jpg"/>
+                </div>
+                <div  class="col-lg-6 full red">
+                    <h5 data-sr="">Fall Semester - 2017</h5>
                     <p class="name">John Meego Start</p>
                     <p class="name">Michelle Lew</p>
                     <p class="name">Gwen Libero</p>
                     <p class="name">Mark Batitang</p>
-                    <p class="name">John Batitang</p>
-                </div>
-                <div  class="col-lg-6 full red">
-                    <img src="img/team.jpg"/>
+                    <p class="name last">John Batitang</p>
                 </div>
                 <?php include("footer.php");?>
             </div>
@@ -67,21 +88,24 @@
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
-<script>
+        <script>
 
-// Changing the defaults
-window.sr = ScrollReveal({ reset: true });
+        // Changing the defaults
+        window.sr = ScrollReveal({ reset: false });
 
-// Customizing a reveal set
+        // Customizing a reveal set
 
-sr.reveal('.full p', {duration:1200});
+        sr.reveal('.full p', {duration:1200});
+        sr.reveal('h5', {origin:'left',distance:'100px', duration:1200});
+        sr.reveal('.main img', {origin:'top', duration:1000});
 
-</script>
-<script>$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-  });</script>
-        
+        </script>
+        <script>$('#toggle').click(function() {
+           $(this).toggleClass('active');
+           $('#overlay').toggleClass('open');
+          });        
+        </script>
+
         
     </body>
 </html>

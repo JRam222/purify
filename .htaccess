@@ -982,3 +982,14 @@ FileETag None
 #     RewriteCond %{REQUEST_FILENAME} !-f
 #     RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
 # </IfModule>
+
+# For rewriting URLs
+ <IfModule mod_rewrite.c>
+     RewriteEngine On
+     RewriteRule ^/?$ index.php
+     RewriteRule ^what_we_do/?$ wwd.php
+     RewriteRule ^leaders/?$ leaders.php
+     RewriteRule ^past_semesters/?$ past.php
+     RewriteRule ^documents/?$ documents.php
+     RewriteRule ^contact/?$ contact.php
+ </IfModule>

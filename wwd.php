@@ -11,13 +11,21 @@
         <link rel="apple-touch-icon" href="icon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-        <!-- Place favicon.ico in the root directory -->
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/media_query.css">
+        
+        <style>
+            .main img{visibility: hidden;}
+        </style>
     </head>
     <body>
         <!--[if lte IE 9]>
@@ -25,17 +33,17 @@
         <![endif]-->
        
         <?php include("navbar.php"); ?>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 content">
+        <div class="container-fluid no-padding">
+            <div class="row no-margin">
+                <div class="col-lg-12 content no-padding">
                     <div class="main">
-                        <img class="center" src="img/wwd2.png">
+                        <img class="center" src="img/wwd2.png" />
                     </div>
                 </div>
                 <div  class="col-lg-12 full red">
-                    <h5>Spiritual Disciplines</h5>
-                    <p>
-                        Spiritual Disciplines are a key component of each semester. As a team, we will all take steps to understand, practice, and challenge ourselves and one another through several different spiritual disciplies. We believe that through spiritual disciplines, we place oursleves in a postion for The Lord to teach and mold us into His image.
+                    <h5 data-sr>Spiritual Disciplines</h5>
+                    <p data-sr="">
+                        Spiritual Disciplines are a key component of each semester. As a team, we will all take steps to understand, practice, and challenge ourselves and one another through several different spiritual disciplines. We believe that through spiritual disciplines, we place ourselves in a position for The Lord to teach and mold us into His image.
                     </p>
                 </div>
                 <div  class="col-lg-6 full beige">
@@ -45,16 +53,16 @@
                     </p>
                 </div>
                 <div  class="col-lg-6 full">
-                    <img src="img/team.jpg"/>
+                    <img class="fullheight" src="img/team.jpg"/>
                 </div>
                 <div  class="col-lg-12 full brown">
                     <h5>Fight Clubs</h5>
                     <p>
-                        Fight Clubs are an initimate oppportunity for each student to spend time with their teammates of the same gender. A time to really enjoy each other through silly games and challenge one another with scripture. We wrestle with the difficulties and hurts that each person is going through with the end goal of ultimately pointing each other to Christ. 
+                        Fight Clubs are an intimate opportunity for each student to spend time with their teammates of the same gender. A time to really enjoy each other through silly games and challenge one another with scripture. We wrestle with the difficulties and hurts that each person is going through with the end goal of ultimately pointing each other to Christ.
                     </p>
                 </div>
                 <div  class="col-lg-6 full beige">
-                    <img src="img/purifriday.jpeg"/>
+                    <img class="fullheight" src="img/purifriday.jpeg"/>
                 </div>
                 <div  class="col-lg-6 full beige">
                     <h5>PuriFridays</h5>
@@ -65,8 +73,9 @@
                 <div  class="col-lg-12 full brown">
                     <h5>Much Much More...</h5>
                     <p>    
-                        There are more things we do in The Purify program, but we would not want to spoil it all by any means. If The Lord is giving you the desire to seek him deeper in the context of a supportive community please join us. We would love to care for and grow alongside you to the Glory of God the Father!
+                        There are more things we do in The Purify program, but we would not want to spoil it all by any means. If The Lord is giving you the desire to seek him deeper in the context of a supportive community, please join us! We would love to care for and grow alongside you to the Glory of God the Father!
                     </p>
+                    <a href="https://drive.google.com/open?id=1sZE26705MnRDLrr10cLIUUGlNMqeSFbX" target="_blank"><button class="btn center buttontwo">View Application</button></a>
                 </div>
                 <?php include("footer.php");?>
             </div>
@@ -92,20 +101,23 @@
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
         <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
-<script>
+        <script>
 
-// Changing the defaults
-window.sr = ScrollReveal({ reset: true });
+        // Changing the defaults
+        window.sr = ScrollReveal({ reset: false });
 
-// Customizing a reveal set
+        // Customizing a reveal set
 
-sr.reveal('.full p', {duration:1200});
+        sr.reveal('.full p', {duration:1200});
+        sr.reveal('h5', {origin:'left',distance:'100px', duration:1200});
+        sr.reveal('.main img', {origin:'top', duration:1000});
+        </script>
 
-</script>
-<script>$('#toggle').click(function() {
-   $(this).toggleClass('active');
-   $('#overlay').toggleClass('open');
-  });</script>
+        <script>$('#toggle').click(function() {
+           $(this).toggleClass('active');
+           $('#overlay').toggleClass('open');
+          });
+        </script>
         
         
     </body>

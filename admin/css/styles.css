@@ -1,0 +1,29 @@
+.header{
+    background:#DED3D3;
+    padding:30px;
+}
+
+.header form{
+    float:right;
+}
+
+.header p{
+    float: left;
+}
+
+table{
+    margin:0 auto 50px auto;
+}
+
+.table-title{
+    background:#FF7F75;
+}
+
+tr th{
+    padding:10px;
+}
+
+td{
+    border:solid 1px black;
+    width:100px;
+}

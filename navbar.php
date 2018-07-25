@@ -7,12 +7,12 @@
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
     <ul>
-      <li ><a href="index.php">Home</a></li>
-      <li><a href="wwd.php">What We Do</a></li>
-      <li><a href="leaders.php">Leaders</a></li>
-      <li><a href="past.php">Past Semesters</a></li>
-        <li><a href="documents.php">Documents</a></li>
-        <li><a href="contact.php">Contact</a></li>
+      <li ><a href="/">Home</a></li>
+      <li><a href="what_we_do">What We Do</a></li>
+      <li><a href="leaders">Leaders</a></li>
+      <li><a href="past_semesters">Current &amp; Past Semesters</a></li>
+        <li><a href="documents">Documents</a></li>
+        <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 </div>

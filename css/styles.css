@@ -7,49 +7,107 @@
 
 }
 
+video{
+    width:100%;
+    height: 100%;
+}
+
+.no-margin{
+    margin:0px;
+}
+
+.no-padding{
+    padding:0px !important;
+}
+
 .center{
    display: block; /*for the img inside your div */ 
     margin: 0 auto ;
 }
 
 .beige{
-    background: #F8FFD3;
+    background: #F7F4F3; /*#F8FFD3;*/
 }
 
 .brown{
-    background: #E8E5B4;
+    background: #E8DCD8;/**#E8E5B4;*/
 }
 
 .red{
-    background: #FF8970;
-}
-
-.blue{
-    background: #97AEFF;
+    background: #FFB1AA; /*#FFB1AA*/
 }
 
 .half{
     height: 90vh;
 }
 
+.main1{
+    /**background-image: url("../img/banner1.png") ;
+    background-size: 100% auto;
+    height: 100vh;**/
+   
+    background-position: center; 
+}
+
+.mainwwd{
+    background-image: url("../img/banner_wwd.png");
+    background-size: 100% auto;
+    height: 100vh;
+   
+    background-position: center; 
+}
+
+.maindocuments{
+    background-image: url("../img/main_documents.png");
+    background-size: 100% auto;
+    height: 100vh;
+   
+    background-position: center; 
+}
+
+.maincontact{
+    background-image: url("../img/banner_contact.png");
+    background-size: 100% auto;
+    height: 100vh;
+   
+    background-position: center; 
+}
+
+.gallery img{
+    width:auto !important;
+    max-width: 100% !important;
+  height: 400px;
+    padding: 20px;
+}
+
+.slick-slider{
+    margin: 60px;
+}
+
 #signature{
     float:right;
+    margin-bottom: 40px;
 }
 
 .full h5{
-    margin: 60px 0px 40px 0px;
+    margin: 60px 0px 60px 0px;
     text-align: center;
     font-size: 25px;
 }
 
 .full p{
     text-align: center;
-    margin: 0 auto 90px auto;
+    margin: 0 auto 60px auto;
     width:50%;
 }
 
 .full button{
-    background:#E8E5B4 ;
+    background:#E8E5DF ;
+    margin-bottom: 40px;
+}
+
+.full .buttontwo{
+    background:#F8FFF9 ;
     margin-bottom: 40px;
 }
 
@@ -57,12 +115,17 @@
     width: 100%;
 }
 
+.fullheight{
+    height: 100%;
+}
+
 .full{
     padding: 0px;
 }
 
 .footer{
-    background: #FF8970;
+    border-top:1px solid #E8DCD8;
+    background: #FFB1AA; /*#FF9085*/
 }
 
 .footer p{
@@ -119,7 +182,7 @@
 }
 .overlay {
   position: fixed;
-  background: #97AEFF;
+  background: #B1C0FF; /*#97AEFF;*/
   top: 0;
   left: 0;
   width: 100%;
@@ -206,11 +269,16 @@
   }
 }
 
-
 .leaders{
-    width:60% !important;
+    width:70% !important;
     display: block; /*for the img inside your div */ 
     margin: 0 auto 40px auto;
+}
+
+.leader-desc{
+    text-align: center;
+    margin: 0 auto 60px auto;
+    width:80% !important;
 }
 
 .name{
@@ -221,7 +289,28 @@
     color: black;
 }
 
+.last{
+    margin-bottom:60px !important;
+}
+
 .submit{
     margin: 0 auto;
     display: block;
+}
+
+[data-sr] {
+    visibility: hidden;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.notice{
+    font-size: 13px !important;
+    width:75% !important;
+}
+
+.color-red{
+    color:red;
 }
